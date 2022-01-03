@@ -3,7 +3,6 @@ import Item from "../../Components/Item/Item";
 import "./Store.css"; 
 import SearchIcon from '@mui/icons-material/Search';
 import Picklist from "../../Components/PickList/PickList";
-import Footer from "../../Components/Footer/Footer";
 
 function Store() {
 
@@ -36,7 +35,6 @@ function Store() {
                     <Item />
                 </div>
             </div> 
-            <Footer /> 
         </div>
     )
 }
