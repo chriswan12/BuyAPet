@@ -1,0 +1,72 @@
+* { 
+    margin: 0; 
+    padding: 0;
+    overflow-x: hidden;
+}
+
+.filter-search {
+    display: flex;
+    justify-content: flex-end;
+    background: #021E39;
+    width: 100%;
+    border-bottom: 4px solid #663100;
+}
+
+.search-container { 
+    background-color: #F0C60C;
+    width: 300px;
+    height: 60px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    overflow-y: hidden;
+}
+
+.search{ 
+    all: unset;
+    font: 16px system-ui;
+    color: #fff;
+    height: 100%;
+    width: 100%;
+    padding: 10px;
+    outline: #FFFFFF;
+}
+
+.search-btn {
+    all: unset;
+    cursor: pointer;
+    width: 44px;
+    height: 100%;
+}
+
+.card-container { 
+    background: #F0C60C;
+    width: 100%;
+}
+
+.family-buying { 
+    background-image: url("https://www.picklee.com/wp-content/uploads/2018/03/therapeutic-benefits-of-having-a-family-pet-1024x682.jpeg");
+    min-width: 100%;
+    background-size: cover; 
+    height: 515px;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 0; 
+    padding: 0; 
+}
+
+.filter { 
+    height: 100vh; 
+    background-color: #021E39;
+    width: 15%;
+}
+
+.content-container{ 
+    display: flex; 
+    height: 100vh;
+    flex-wrap: nowrap; 
+    margin: 0;
+    padding: 0; 
+}
+

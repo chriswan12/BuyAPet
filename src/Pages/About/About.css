@@ -1,0 +1,62 @@
+.parent-div { 
+    position: relative;
+    height: 100vh;
+    z-index:-5;
+}
+
+.about-us-header{ 
+    display: flex;
+    background-color: #FCD00D;
+    height: 40vh; 
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    top: 0; 
+    width: 100%;
+}
+
+.about-us-footer { 
+    justify-content: center;
+    display: flex;
+    background-color: #021E39;
+    flex-direction: column;
+    height: 60vh;
+    flex-wrap: wrap;
+    position: absolute;
+    top: 40vh;
+}
+
+.header-text { 
+    text-align: center;
+    margin: 20px;
+    color: #021E39;
+    font-weight: bold;
+    font-size: 45px;
+}
+
+.title-text { 
+    text-align: center;
+    margin: 20px;
+    color: #021E39;
+    font-weight: bold;
+    font-size: 60px;
+}
+
+.footer-text { 
+    text-align: center;
+    margin: 30px; 
+    color: white;
+    font-size: 21px;
+}
+
+.walking-dog{ 
+    height: 65%; 
+    width: 50%;
+    position: absolute;
+    top: -20vh;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    z-index: 12;
+}

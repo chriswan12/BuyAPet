@@ -1,0 +1,32 @@
+.each-filter {  
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    margin: 10% 10px 20% 10px; 
+}
+
+label { 
+    margin-bottom: 15px;
+}
+
+button { 
+    margin: 20px; 
+    background: #F0C60C; 
+    border-radius: 20px; 
+    border: none; 
+    color: #fff; 
+    padding: 10px; 
+    font-weight: 600; 
+    text-transform: uppercase;
+    cursor: pointer;
+}
+
+.select-filter { 
+    padding: 8px;
+    background-color: #F0C60C;
+    color: white; 
+    font-size: 18px;
+    outline: none;
+}
+

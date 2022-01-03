@@ -1,0 +1,116 @@
+.body { 
+    background-color: #FCD00D;
+    height: 100vh; 
+}
+
+.contact-title { 
+    text-align: center;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    font-weight: bold;
+    font-size: 70px;
+    color: #021E39; 
+}
+
+.contact-info-container{ 
+    display: flex;
+    justify-content: space-evenly;
+    height: 50vh;
+}
+
+.user-feedback{ 
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.contact-card{ 
+    background-color: #021E39;
+    color: white;
+    margin-top: 55px;
+    height: 33vh;
+    width: 20%;
+    text-align: center;
+    border: white 2px solid;
+    border-radius: 7%;
+    box-shadow: 2px 2px 6-px 0px rgba(0,0,0,0.3); 
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 2px 2px 26px 0px rgba(0,0,0,0.3);
+}
+
+.contact-header{
+    margin-top: 25px; 
+    margin-bottom: 10px;
+    font-size: 25px;
+}
+
+.contact-text{ 
+    font-size: 15px;
+}
+
+.contact-input{ 
+    padding: 17px;
+    width: 450px;
+    margin: 20px 0px 20px 10px;
+    background-color: #021E39;
+    color: white;
+}
+
+.submit-button{
+    width: 100px;
+    background-color: #021E39;
+    color: white; 
+    margin-left: 350px;
+}
+
+.contact-footer-container { 
+    background-color: #021E39;
+    height: 50vh;
+    color: white; 
+}
+
+
+/* Social media section */
+
+.social-media{ 
+    display: flex;
+    flex-direction: row;
+}
+
+.social-media li { 
+    margin-left: 30px;
+    padding: 9px;
+    border-radius: 50%;
+    background-color: white;
+}
+
+.social-media-icons { 
+    transform: scale(1.5);
+    color: #021E39; 
+}
+
+.footer-title { 
+   margin: 30px;
+   font-size: 50px;
+}
+
+.footer-subtitle{ 
+   margin: 30px;
+   font-size: 30px;
+}
+
+.descriptive-text{ 
+    font-size: 15px;
+    margin: 30px;
+}
+
+.touch-icon{ 
+    transform: scale(2.2);
+    margin: 12px;
+}

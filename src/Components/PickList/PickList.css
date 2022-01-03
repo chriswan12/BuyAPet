@@ -1,0 +1,16 @@
+* { 
+    padding:  0px; 
+    margin: 0px; 
+}
+
+label { 
+    color: white; 
+}
+
+
+.filter-container { 
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: column; 
+}
