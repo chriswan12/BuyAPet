@@ -10,13 +10,12 @@ import AddDogModal from "../../Components/AddDogModal/AddDogModal";
 function Store() {
 
     const [searchTerm, setSearchTerm] = useState(""); 
-    // const [detailModalOpen, setDetailModalOpen] = useState(false); 
     const [addDogModalOpen, setAddDogModalOpen] = useState(false); 
     const [idCounter, setIdCounter] = useState(1); 
     const [lstOfDogs, setLstOfDogs] = useState([
         { name: "test1",
             description: "lorem ipsum",
-            id: idCounter,
+            id: 1,
             breed: "Poodle",
             size: "Small (0-25lb)", 
             gender: "Male",
@@ -28,7 +27,7 @@ function Store() {
         {
             name: "test2",
             description: "lorem ipsum",
-            id: idCounter,
+            id: 2,
             breed: "Husky",
             size: "Large (60+ lbs)", 
             gender: "Female",
@@ -40,7 +39,7 @@ function Store() {
         {
             name: "test3",
             description: "lorem ipsum",
-            id: idCounter,
+            id: 3,
             breed: "Husky",
             size: "Large (60+ lbs)", 
             gender: "Female",
@@ -143,7 +142,7 @@ function Store() {
                             return val
                         }
                     }).map((lstItem, index) => (
-                        <Item key={index} item={lstItem} setLstOfDogs={setLstOfDogs} content={lstItem} dogs={lstOfDogs}/> 
+                        <Item key={index} item={lstItem} setLstOfDogs={setLstOfDogs} content={lstItem} dogs={lstOfDogs} /> 
                     ))}
                 </div>
             </div> 

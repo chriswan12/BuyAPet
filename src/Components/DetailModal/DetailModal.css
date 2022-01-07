@@ -1,0 +1,27 @@
+.detail-container{ 
+    background-color: #021E39;
+    color: white; 
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+.header-footer-container{
+    background-color: #021E39;
+    display: flex;
+    justify-content: center;
+}
+
+.detailTitle{
+    color: white; 
+    margin-top: 10px;
+}
+
+.detail-content { 
+    margin: 10px; 
+    padding: 5px;
+}
+
+.detail-close-button{ 
+    width: 80vh;
+}
