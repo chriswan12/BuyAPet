@@ -6,50 +6,14 @@ import SearchIcon from '@mui/icons-material/Search';
 import Picklist from "../../Components/PickList/PickList";
 import AddIcon from '@mui/icons-material/Add';
 import AddDogModal from "../../Components/AddDogModal/AddDogModal";
+import ReactPaginate from "react-paginate";
 
-function Store() {
+function Store() {    
 
     const [searchTerm, setSearchTerm] = useState(""); 
     const [addDogModalOpen, setAddDogModalOpen] = useState(false); 
     const [idCounter, setIdCounter] = useState(1); 
-    const [lstOfDogs, setLstOfDogs] = useState([
-        { name: "test1",
-            description: "lorem ipsum",
-            id: 1,
-            breed: "Poodle",
-            size: "Small (0-25lb)", 
-            gender: "Male",
-            color: "Black",
-            price: "350-500",
-            ownerName: "Bob",
-            phone: "231414"
-        },
-        {
-            name: "test2",
-            description: "lorem ipsum",
-            id: 2,
-            breed: "Husky",
-            size: "Large (60+ lbs)", 
-            gender: "Female",
-            color: "White",
-            price: "350-500",
-            ownerName: "Bob",
-            phone: "231414"
-        },
-        {
-            name: "test3",
-            description: "lorem ipsum",
-            id: 3,
-            breed: "Husky",
-            size: "Large (60+ lbs)", 
-            gender: "Female",
-            color: "Black",
-            price: "350-500",
-            ownerName: "Bob",
-            phone: "231414"
-        }
-
-    ]);
+    const [lstOfDogs, setLstOfDogs] = useState([]);
 
     const [addFilter, setAddFilter] = useState(false); 
     const [filters, setFilters] = useState({
@@ -59,6 +23,21 @@ function Store() {
         color: "", 
         price: ""
     }); 
+
+    
+    // pagination logic 
+
+    // represents what page we are in 
+    const [pageNumber, setPageNumber] = useState(0);  
+
+    const numberOfDogsToDisplay = 8; 
+    const pageVisited = pageNumber * numberOfDogsToDisplay; 
+
+    function changePage({selected}) { 
+        setPageNumber(selected); 
+    }
+
+    // End of Pagination logic 
 
     function openAddDogModal() { 
         setAddDogModalOpen(true);
@@ -121,13 +100,27 @@ function Store() {
                     </button>
                 </div> 
             </div> 
+                
+            {/* Pagination */}
+            <ReactPaginate 
+                previousLabel={"Prev"}
+                nextLabel={"Next"}
+                pageCount={Math.ceil(lstOfDogs.length / numberOfDogsToDisplay)}
+                onPageChange={changePage}
+                containerClassName={"paginationBtn"}
+                previousLinkClassName={"prevPaginationBtn"}
+                nextLinkClassName={"nextPaginationBtn"}
+                activeClassName={"activePagination"}
+            /> 
+
+            {/* Cards Content */}
             <div className="content-container">
                 <div className="filter"> 
                     <Picklist getFilters={getFilters}/> 
                 </div>
-    
                 <div className="card-container">
-                    {lstOfDogs.filter((val) => {
+                    {/* Display all the items for the current page number that the user is current on (display numberOfDogsDisplay amount) */}
+                    {lstOfDogs.slice(pageVisited, pageVisited + numberOfDogsToDisplay).filter((val) => {
                         if (searchTerm === "") {
                             return val; 
                         } else if (val.name.toLowerCase().includes(searchTerm.toLowerCase())){

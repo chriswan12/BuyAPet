@@ -80,3 +80,47 @@
     height: 100%;
     padding: 10px;
 }
+
+/* Pagnation Section */
+.paginationBtn { 
+    width: 100%;
+    height: 60px;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    background-color: #021E39;
+    color: white;
+    border-bottom: 4px solid #663100;
+}
+
+.paginationBtn li { 
+    margin-top: 10px;
+    padding: 10px;
+}
+
+.paginationBtn a { 
+    padding: 8px;
+    margin: 8px;
+    border-radius: 5px;
+    border: 2px solid #F0C60C; 
+    cursor: pointer;
+}
+
+.paginationBtn a:hover { 
+    background-color: #F0C60C;
+    color: #0001A3; 
+}
+
+.prevPaginationBtn{
+    background-color: #EBC323;
+}
+
+.nextPaginationBtn{ 
+    background-color: #EBC323;
+}
+
+.activePagination a{
+    background-color: #F0C60C;
+    color: #0001A3; 
+}
+
