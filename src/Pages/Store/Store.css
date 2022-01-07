@@ -38,6 +38,8 @@
     cursor: pointer;
     width: 44px;
     height: 100%;
+    padding: 10px;
+    border-right: solid 2px white;
 }
 
 .card-container { 
@@ -70,3 +72,11 @@
     padding: 0; 
 }
 
+
+.add-dog { 
+    all: unset;
+    cursor: pointer;
+    width: 44px;
+    height: 100%;
+    padding: 10px;
+}
