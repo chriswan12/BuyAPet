@@ -1,6 +1,8 @@
 import React, { useState } from 'react'; 
+import Dialog from '@mui/material/Dialog';
+import "./AddDogModal.css";
 
-function AddDogModal( { setAddDogModalOpen, idCounter, addDog }) {
+function AddDogModal( { addDogModalOpen, setAddDogModalOpen, idCounter, addDog }) {
 
     const [breed, setBreed] = useState('');
     const [gender, setGender] = useState('');
@@ -30,79 +32,102 @@ function AddDogModal( { setAddDogModalOpen, idCounter, addDog }) {
     }
 
     return (
-        <div className='addDogModalBackground'>
+        <Dialog open={addDogModalOpen} >
             <div className='addDogModalContainer'> 
-                <button>X</button>
+                <div className='close-button'> 
+                     <button onClick={() => { setAddDogModalOpen(false) }}>X</button>
+                </div> 
 
                 <div className='addDogTitle'> 
-                    <h1>Add Dog</h1>
+                    <h1 className='modal-title'>Add Dog</h1>
                 </div>
                 <div className='addDogbody'> 
                 
-                    <div> 
+                    <div className='input-fields'> 
                         {/* Owner Name */}
-                        <label htmlFor="dog-owner-name">Owner Name:</label>
-                        <input type="text" id="dog-owner-name" name="dog-owner-name" placeholder="What is your name?" value={ownerName} onChange={(e)=> { 
-                            setOwnerName(e.target.value); 
-                        }}></input>
-
+                        <div className='dog-input'>
+                            <label htmlFor="dog-owner-name">Owner Name:</label>
+                            <input type="text" id="dog-owner-name" name="dog-owner-name" placeholder="What is your name?" value={ownerName} onChange={(e)=> { 
+                                setOwnerName(e.target.value); 
+                            }}></input>
+                        </div> 
+                        
+                        
                         {/* Phone Number */}
-                        <label htmlFor="dog-owner-tel-num">Phone Number: </label>
-                        <input type="tel" id="dog-owner-tel-num" name="dog-owner-tel-num" placeholder='What is your phone number?' value={phoneNum} onChange={(e)=>{
-                            setPhoneNum(e.target.value);
-                        }}></input>
+                        <div className='dog-input'> 
+                            <label htmlFor="dog-owner-tel-num">Phone Number: </label>
+                            <input type="tel" id="dog-owner-tel-num" name="dog-owner-tel-num" placeholder='What is your phone number?' value={phoneNum} onChange={(e)=>{
+                                setPhoneNum(e.target.value);
+                            }}></input>
+                        </div> 
 
                         {/* Dog Name */}
-                        <label htmlFor="dog-name">Dog Name: </label>
-                        <input type="text" id="dog-name" name="dog-name" placeholder="What is the Dog's name" value={dogName} onChange={(e)=>{
-                            setDogName(e.target.value); 
-                        }}></input>
+                        <div className='dog-input'> 
+                            <label htmlFor="dog-name">Dog Name: </label>
+                            <input type="text" id="dog-name" name="dog-name" placeholder="What is the Dog's name" value={dogName} onChange={(e)=>{
+                                setDogName(e.target.value); 
+                            }}></input>
+                        </div> 
 
                         {/* Price */}
-                        <label htmlFor="dog-price">Price: </label>
-                        <input type="number" id="dog-price" name="dog-price" placeholder='How much?' value={price} onChange={(e)=>{
-                            setPrice(e.target.value);
-                        }}></input>
+                        <div className='dog-input'> 
+                            <label htmlFor="dog-price">Price: </label>
+                            <input type="number" id="dog-price" name="dog-price" placeholder='How much?' value={price} onChange={(e)=>{
+                                setPrice(e.target.value);
+                            }}></input>
+                        </div> 
 
                     </div>
-                    <div> 
+                    <div className='input-fields'> 
                         {/* Breed */}
-                        <select onChange={(e) => { 
-                            const selectedBreed = e.target.value;
-                            setBreed(selectedBreed); 
-                        }}> 
-                            <option value="German Shepherd">German Shepherd</option>
-                            <option value="Poodle">Poodle</option>
-                            <option value="Bulldog">Bulldog</option>
-                            <option value="Husky">Husky</option>
-                        </select>
+
+                        <div className='dog-input'> 
+                            <label htmlFor="dog-breed">Breed: </label>
+                            <select name="dog-breed" id="dog-breed" onChange={(e) => { 
+                                const selectedBreed = e.target.value;
+                                setBreed(selectedBreed); 
+                            }}> 
+                                <option value="German Shepherd">German Shepherd</option>
+                                <option value="Poodle">Poodle</option>
+                                <option value="Bulldog">Bulldog</option>
+                                <option value="Husky">Husky</option>
+                            </select>
+                        </div> 
 
                         {/* Size */}
-                        <label htmlFor="dog-size">Size: </label>
-                        <input type="number" id="dog-size" name="dog-size" placeholder='How much does your dog weigh' value={size} onChange={(e) => { 
-                            setSize(e.target.value); 
-                        }}></input>
+                        <div className='dog-input'> 
+                            <label htmlFor="dog-size">Size: </label>
+                            <input type="number" id="dog-size" name="dog-size" placeholder='How much does your dog weigh' value={size} onChange={(e) => { 
+                                setSize(e.target.value); 
+                            }}></input>
+                        </div> 
                         
                         {/* Gender */}
-                        <select onChange={(e) => { 
-                            const selectedGender = e.target.value;
-                            setGender(selectedGender); 
-                        }}> 
-                            <option value="Male">Male</option>
-                            <option value="Female">Female</option>
-                        </select>
+                        <div className='dog-input'> 
+                            <label htmlFor="dog-gender">Breed: </label>
+                            <select name="dog-gender" onChange={(e) => { 
+                                const selectedGender = e.target.value;
+                                setGender(selectedGender); 
+                            }}> 
+                                <option value="Male">Male</option>
+                                <option value="Female">Female</option>
+                            </select>
+                        </div> 
 
                         {/* Color */}
-                        <select onChange={(e) => { 
-                            const selectedColor = e.target.value;
-                            setColor(selectedColor); 
-                        }}> 
-                            <option value="Black">Black</option>
-                            <option value="White">White</option>
-                            <option value="Golden">Golden</option>
-                            <option value="Brown">Brown</option>
-                            <option value="Gray">Gray</option>
-                        </select>
+                        <div className='dog-input'> 
+                            <label htmlFor="dog-color">Breed: </label>
+                            <select name="dog-color" onChange={(e) => { 
+                                const selectedColor = e.target.value;
+                                setColor(selectedColor); 
+                            }}> 
+                                <option value="Black">Black</option>
+                                <option value="White">White</option>
+                                <option value="Golden">Golden</option>
+                                <option value="Brown">Brown</option>
+                                <option value="Gray">Gray</option>
+                            </select>
+                        </div> 
                     </div> 
     
                 </div>
@@ -112,7 +137,7 @@ function AddDogModal( { setAddDogModalOpen, idCounter, addDog }) {
                     <button onClick={handleAdd}>Add</button>
                 </div>
             </div> 
-        </div>
+        </Dialog>
     );
 };
 

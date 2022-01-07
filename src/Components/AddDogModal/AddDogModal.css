@@ -1,0 +1,40 @@
+.addDogModalContainer{ 
+    background-color: #021E39;
+    padding: 40px;
+}
+
+.modal-title{ 
+    color: white; 
+}
+
+.addDogbody{ 
+    display: flex;
+    justify-content: space-between;
+    margin: 5px; 
+    padding: 50px;
+}
+
+.input-fields{ 
+    display: flex;
+    flex-direction: column;
+}
+
+.close-button { 
+    display: flex;
+    justify-content: flex-end;
+}
+
+.dog-input {
+    margin: 5px; 
+    padding: 10px;
+}
+
+.addDogTitle { 
+    display: flex;
+    justify-content: center;
+}
+
+.addDogfooter { 
+    display: flex;
+    justify-content: space-evenly;
+}

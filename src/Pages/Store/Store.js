@@ -148,7 +148,7 @@ function Store() {
                 </div>
             </div> 
 
-            {addDogModalOpen && <AddDogModal setAddDogModalOpen={setAddDogModalOpen} idCounter={idCounter} setIdCounter={setIdCounter} addDog={addDog}/>}
+            {addDogModalOpen && <AddDogModal addDogModalOpen={addDogModalOpen} setAddDogModalOpen={setAddDogModalOpen} idCounter={idCounter} setIdCounter={setIdCounter} addDog={addDog}/>}
         </div>
     )
 }
