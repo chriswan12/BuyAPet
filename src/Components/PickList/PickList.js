@@ -41,15 +41,45 @@ const Picklist = ({ getFilters }) => {
     const [priceValue, setPriceValue] = useState(''); 
 
     function getFilterValues() { 
+        
         const filterValues = { 
             breed: breedValue,
-            size: sizeValue, 
+            size: determineSize(sizeValue[0]), 
             gender: genderValue, 
             color: colorValue, 
-            price: priceValue
+            price: determinePrice(priceValue)
         } 
         
         getFilters(filterValues); 
+    }
+
+    function determineSize(size) { 
+        if(!size) {
+            return [0, Infinity]; 
+        }
+        else if(size.toLowerCase() === "s"){
+            return [0, 25]
+        }
+        else if (size.toLowerCase() === "m"){
+            return [26, 60];
+        }
+        else if (size.toLowerCase() === "l"){
+            return [60, Infinity];
+        }
+        else {
+            return [0, Infinity]; 
+        }
+    }
+
+    function determinePrice(price) { 
+        if(price.length <= 0){
+            return [0, Infinity]; 
+        }
+        else if (price.search("-") === -1){
+            return [1000, Infinity]; 
+        }
+        const priceValues = price.split("-"); 
+        return [parseInt(priceValues[0]), parseInt(priceValues[1])]; 
     }
 
 

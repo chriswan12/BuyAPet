@@ -47,7 +47,7 @@ function AddDogModal( { addDogModalOpen, setAddDogModalOpen, idCounter, addDog }
                         {/* Owner Name */}
                         <div className='dog-input'>
                             <label htmlFor="dog-owner-name">Owner Name:</label>
-                            <input type="text" id="dog-owner-name" name="dog-owner-name" placeholder="What is your name?" value={ownerName} onChange={(e)=> { 
+                            <input className="inputs-for-modal" type="text" id="dog-owner-name" name="dog-owner-name" placeholder="What is your name?" value={ownerName} onChange={(e)=> { 
                                 setOwnerName(e.target.value); 
                             }}></input>
                         </div> 
@@ -56,7 +56,7 @@ function AddDogModal( { addDogModalOpen, setAddDogModalOpen, idCounter, addDog }
                         {/* Phone Number */}
                         <div className='dog-input'> 
                             <label htmlFor="dog-owner-tel-num">Phone Number: </label>
-                            <input type="tel" id="dog-owner-tel-num" name="dog-owner-tel-num" placeholder='What is your phone number?' value={phoneNum} onChange={(e)=>{
+                            <input className="inputs-for-modal" type="tel" id="dog-owner-tel-num" name="dog-owner-tel-num" placeholder='What is your phone number?' value={phoneNum} onChange={(e)=>{
                                 setPhoneNum(e.target.value);
                             }}></input>
                         </div> 
@@ -64,7 +64,7 @@ function AddDogModal( { addDogModalOpen, setAddDogModalOpen, idCounter, addDog }
                         {/* Dog Name */}
                         <div className='dog-input'> 
                             <label htmlFor="dog-name">Dog Name: </label>
-                            <input type="text" id="dog-name" name="dog-name" placeholder="What is the Dog's name" value={dogName} onChange={(e)=>{
+                            <input className="inputs-for-modal" type="text" id="dog-name" name="dog-name" placeholder="What is the Dog's name" value={dogName} onChange={(e)=>{
                                 setDogName(e.target.value); 
                             }}></input>
                         </div> 
@@ -72,7 +72,7 @@ function AddDogModal( { addDogModalOpen, setAddDogModalOpen, idCounter, addDog }
                         {/* Price */}
                         <div className='dog-input'> 
                             <label htmlFor="dog-price">Price: </label>
-                            <input type="number" id="dog-price" name="dog-price" placeholder='How much?' value={price} onChange={(e)=>{
+                            <input className="inputs-for-modal" type="number" id="dog-price" name="dog-price" placeholder='How much?' value={price} onChange={(e)=>{
                                 setPrice(e.target.value);
                             }}></input>
                         </div> 
@@ -83,7 +83,7 @@ function AddDogModal( { addDogModalOpen, setAddDogModalOpen, idCounter, addDog }
 
                         <div className='dog-input'> 
                             <label htmlFor="dog-breed">Breed: </label>
-                            <select name="dog-breed" id="dog-breed" onChange={(e) => { 
+                            <select className="inputs-for-modal" name="dog-breed" id="dog-breed" onChange={(e) => { 
                                 const selectedBreed = e.target.value;
                                 setBreed(selectedBreed); 
                             }}> 
@@ -97,7 +97,7 @@ function AddDogModal( { addDogModalOpen, setAddDogModalOpen, idCounter, addDog }
                         {/* Size */}
                         <div className='dog-input'> 
                             <label htmlFor="dog-size">Size: </label>
-                            <input type="number" id="dog-size" name="dog-size" placeholder='How much does your dog weigh' value={size} onChange={(e) => { 
+                            <input className="inputs-for-modal" type="number" id="dog-size" name="dog-size" placeholder='How much does your dog weigh' value={size} onChange={(e) => { 
                                 setSize(e.target.value); 
                             }}></input>
                         </div> 
@@ -105,7 +105,7 @@ function AddDogModal( { addDogModalOpen, setAddDogModalOpen, idCounter, addDog }
                         {/* Gender */}
                         <div className='dog-input'> 
                             <label htmlFor="dog-gender">Breed: </label>
-                            <select name="dog-gender" onChange={(e) => { 
+                            <select className="inputs-for-modal" name="dog-gender" onChange={(e) => { 
                                 const selectedGender = e.target.value;
                                 setGender(selectedGender); 
                             }}> 
@@ -117,7 +117,7 @@ function AddDogModal( { addDogModalOpen, setAddDogModalOpen, idCounter, addDog }
                         {/* Color */}
                         <div className='dog-input'> 
                             <label htmlFor="dog-color">Breed: </label>
-                            <select name="dog-color" onChange={(e) => { 
+                            <select className="inputs-for-modal" name="dog-color" onChange={(e) => { 
                                 const selectedColor = e.target.value;
                                 setColor(selectedColor); 
                             }}> 

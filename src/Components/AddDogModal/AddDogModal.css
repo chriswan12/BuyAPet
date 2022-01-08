@@ -38,3 +38,10 @@
     display: flex;
     justify-content: space-evenly;
 }
+
+.inputs-for-modal {
+    padding: 10px;
+    font-size: 14px;
+    outline: none;
+    width: 20vh;
+}

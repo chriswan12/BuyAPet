@@ -18,10 +18,10 @@ function Store() {
     const [addFilter, setAddFilter] = useState(false); 
     const [filters, setFilters] = useState({
         breed: "", 
-        size: "", 
+        size: [0, Infinity], 
         gender: "", 
         color: "", 
-        price: ""
+        price: [0, Infinity]
     }); 
 
     
@@ -52,31 +52,23 @@ function Store() {
         // only get the object that has the filter condition satisfied
         // Added the || !condition to see if the user has selected that filter if so check the equal condition, if not 
         // ignore this filter and apply the ones that exists 
-        return ((val.breed === filters.breed || !filters.breed) && (val.size === filters.size || !filters.size) && 
+        return ((val.breed === filters.breed || !filters.breed) && (val.size >= filters.size[0] && val.size <= filters.size[1]) && 
         (val.color === filters.color || !filters.color) &&
-        (val.price === filters.price || !filters.price) && (val.gender === filters.gender || !filters.gender));
+        (val.price >= filters.price[0] && val.price <= filters.price[1]) && (val.gender === filters.gender || !filters.gender));
     }
 
     function getFilters(filterValues) { 
-        setFilters({
-            breed: filterValues.breed,
-            size: filterValues.size,
-            gender: filterValues.gender,
-            color: filterValues.color, 
-            price: filterValues.price
-        }); 
+        setFilters(filterValues); 
         setAddFilter(true); 
 
-        if (!filterValues.breed && !filterValues.size 
-        && !filterValues.gender  && !filterValues.color 
-        && !filterValues.price
+        if (filterValues.breed.length >0 && filterValues.gender.length >0  && filterValues.color.length > 0
         ){
             setFilters({
                 breed: "",
-                size: "",
+                size: [0, Infinity],
                 gender: "",
                 color: "", 
-                price: ""
+                price: [0, Infinity]
             }); 
             setAddFilter(false) 
         }

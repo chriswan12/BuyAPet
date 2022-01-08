@@ -14,16 +14,16 @@ function DetailModal( {detailModalOpen, setDetailModalOpen, item, dogs} ) {
                 </div>
                 <div className='detail-container'>
                     <div className='section-1'> 
-                        <p className='detail-content'>Description: {itemClicked.description}</p> 
-                        <p className='detail-content'>Color: {itemClicked.color}</p> 
-                        <p className='detail-content'>Breed: {itemClicked.breed}</p> 
-                        <p className='detail-content'>Gender: {itemClicked.gender}</p> 
+                        <p className='detail-content'><b>Description:</b> {itemClicked.description}</p> 
+                        <p className='detail-content'><b>Color:</b> {itemClicked.color}</p> 
+                        <p className='detail-content'><b>Breed:</b> {itemClicked.breed}</p> 
+                        <p className='detail-content'><b>Gender:</b> {itemClicked.gender}</p> 
                     </div>
                     <div className='section-2'> 
-                        <p className='detail-content'>OwnerName: {itemClicked.ownerName}</p> 
-                        <p className='detail-content'>Phone: {itemClicked.phone}</p> 
-                        <p className='detail-content'>Price: {itemClicked.price}</p> 
-                        <p className='detail-content'>Size: {itemClicked.size}</p> 
+                        <p className='detail-content'><b>OwnerName:</b> {itemClicked.ownerName}</p> 
+                        <p className='detail-content'><b>Phone: </b>{itemClicked.phone}</p> 
+                        <p className='detail-content'><b>Price:</b> {itemClicked.price}</p> 
+                        <p className='detail-content'><b>Size: </b>{itemClicked.size}</p> 
                     </div>
                 </div> 
                 <div className='header-footer-container'>

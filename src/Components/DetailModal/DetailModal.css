@@ -4,6 +4,7 @@
     padding: 40px;
     display: flex;
     justify-content: center;
+    font-size: 1.2rem;
 }
 
 .header-footer-container{
@@ -15,6 +16,8 @@
 .detailTitle{
     color: white; 
     margin-top: 10px;
+    font-size: 4rem;
+    text-decoration: underline;
 }
 
 .detail-content { 
