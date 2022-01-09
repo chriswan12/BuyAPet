@@ -104,7 +104,7 @@ function AddDogModal( { addDogModalOpen, setAddDogModalOpen, idCounter, addDog }
                         
                         {/* Gender */}
                         <div className='dog-input'> 
-                            <label htmlFor="dog-gender">Breed: </label>
+                            <label htmlFor="dog-gender">Gender: </label>
                             <select className="inputs-for-modal" name="dog-gender" onChange={(e) => { 
                                 const selectedGender = e.target.value;
                                 setGender(selectedGender); 
@@ -116,7 +116,7 @@ function AddDogModal( { addDogModalOpen, setAddDogModalOpen, idCounter, addDog }
 
                         {/* Color */}
                         <div className='dog-input'> 
-                            <label htmlFor="dog-color">Breed: </label>
+                            <label htmlFor="dog-color">Color: </label>
                             <select className="inputs-for-modal" name="dog-color" onChange={(e) => { 
                                 const selectedColor = e.target.value;
                                 setColor(selectedColor); 
